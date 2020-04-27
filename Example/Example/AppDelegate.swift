@@ -1,20 +1,16 @@
-# CD_AppDelegate
+//Created  on 2019/3/12 by  LCD:https://github.com/liucaide .
 
-> AppDelegate 解耦
+/***** 模块文档 *****
+ *
+ */
 
-## Installation
 
-CaamDau is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
 
-```ruby
-pod 'CaamDauAppDelegate'
 
-pod 'CaamDau/AppDelegate'
-```
+import UIKit
+import CaamDauAppDelegate
 
-### AppDelegate
-```
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     lazy var composite: CD_AppDelegateComposite = {
@@ -33,23 +29,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-```
-### AppDelegate Modul
-```
+
 class AppWindow: CD_AppDelegate {
     var window: UIWindow?
     init(_ win: UIWindow?) {
         window = win
     }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        let vc = VC_Tab.show()
-        window?.rootViewController = vc
-        window?.makeKeyAndVisible()
+        //let vc = VC_Tab.show()
+        //window?.rootViewController = vc
         return true
     }
 }
-```
-```
+
+
+class AppUM: CD_AppDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        return true
+    }
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return true
+    }
+}
+
+
 class AppConfig: CD_AppDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         return true
@@ -58,8 +61,8 @@ class AppConfig: CD_AppDelegate {
         return true
     }
 }
-```
-```
+
+
 class AppPay: CD_AppDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         return true
@@ -68,14 +71,3 @@ class AppPay: CD_AppDelegate {
         return true
     }
 }
-```
-
-- [参考](https://juejin.im/post/5bd0259d5188251a29719086#comment)
-
-## Author
-
-liucaide, 565726319@qq.com
-
-## License
-
-CaamDau is available under the MIT license. See the LICENSE file for more info.
