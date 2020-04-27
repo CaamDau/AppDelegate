@@ -1,5 +1,14 @@
-# CD_AppDelegate
+<p>
+  <img src="https://github.com/liucaide/Images/blob/master/CaamDau/caamdau.png" align=centre />
+</p>
 
+[![CI Status](https://img.shields.io/travis/CaamDau/CaamDauValue.svg?style=flat)](https://travis-ci.org/CaamDau/AppDelegate)
+[![Version](https://img.shields.io/cocoapods/v/CaamDauAppDelegate.svg?style=flat)](https://cocoapods.org/pods/CaamDauAppDelegate)
+[![License](https://img.shields.io/cocoapods/l/CaamDauAppDelegate.svg?style=flat)](https://cocoapods.org/pods/CaamDauAppDelegate)
+[![Platform](https://img.shields.io/cocoapods/p/CaamDauAppDelegate.svg?style=flat)](https://cocoapods.org/pods/CaamDauAppDelegate)
+[![](https://img.shields.io/badge/Swift-4.0~5.0-orange.svg?style=flat)](https://cocoapods.org/pods/CaamDauAppDelegate)
+
+# CD_AppDelegate
 > AppDelegate 解耦
 
 ## Installation
