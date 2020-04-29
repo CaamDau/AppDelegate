@@ -172,7 +172,7 @@ open class CD_AppDelegateComposite: CD_AppDelegate {
         return true
     }
     /// 可以使用继续活动的数据
-    public func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+    public func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         for item in composite {
             if let bool = item.application?(application, continue: userActivity, restorationHandler: restorationHandler), !bool {
                 return false
