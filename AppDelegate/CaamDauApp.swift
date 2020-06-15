@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
-/* 如果希望增加 SiriKit、CloudKit 可以继承 CD_AppDelegateComposite 增加
+/* 如果希望增加 SiriKit、CloudKit 可以继承 CaamDauAppDelegateComposite 增加
 import Intents
 import IntentsUI
  
 import CloudKit
 */
 
-public typealias CD_AppDelegate = UIResponder & UIApplicationDelegate
+public typealias CaamDauAppDelegate = UIResponder & UIApplicationDelegate
 
-open class CD_AppDelegateComposite: CD_AppDelegate {
-    private let composite:[CD_AppDelegate]
-    public init(_ delegates:[CD_AppDelegate]) {
+open class CaamDauAppDelegateComposite: CaamDauAppDelegate {
+    private let composite:[CaamDauAppDelegate]
+    public init(_ delegates:[CaamDauAppDelegate]) {
         self.composite = delegates
     }
     //MARK:--- 启动 初始化 ----------

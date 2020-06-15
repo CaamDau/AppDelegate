@@ -13,8 +13,8 @@ import CaamDauAppDelegate
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    lazy var composite: CD_AppDelegateComposite = {
-        return CD_AppDelegateComposite([
+    lazy var composite: CaamDauAppDelegateComposite = {
+        return CaamDauAppDelegateComposite([
             AppConfig(),
             AppWindow(window),
             AppUM(),
@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 
-class AppWindow: CD_AppDelegate {
+class AppWindow: CaamDauAppDelegate {
     var window: UIWindow?
     init(_ win: UIWindow?) {
         window = win
@@ -47,7 +47,7 @@ class AppWindow: CD_AppDelegate {
 }
 
 
-class AppUM: CD_AppDelegate {
+class AppUM: CaamDauAppDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         return true
     }
@@ -57,7 +57,7 @@ class AppUM: CD_AppDelegate {
 }
 
 
-class AppConfig: CD_AppDelegate {
+class AppConfig: CaamDauAppDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         return true
     }
@@ -67,7 +67,7 @@ class AppConfig: CD_AppDelegate {
 }
 
 
-class AppPay: CD_AppDelegate {
+class AppPay: CaamDauAppDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         return true
     }
