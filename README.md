@@ -8,7 +8,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/CaamDauAppDelegate.svg?style=flat)](https://cocoapods.org/pods/CaamDauAppDelegate)
 [![](https://img.shields.io/badge/Swift-4.0~5.0-orange.svg?style=flat)](https://cocoapods.org/pods/CaamDauAppDelegate)
 
-# CD_AppDelegate
+# AppDelegate
 > AppDelegate 解耦
 
 ## Installation
@@ -26,8 +26,8 @@ pod 'CaamDau/AppDelegate'
 ```
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    lazy var composite: CD_AppDelegateComposite = {
-        return CD_AppDelegateComposite([
+    lazy var composite: AppComposite = {
+        return AppComposite([
             AppConfig(),
             AppWindow(window),
             AppUM(),
@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 ### AppDelegate Modul
 ```
-class AppWindow: CD_AppDelegate {
+class AppWindow: AppProtocol {
     var window: UIWindow?
     init(_ win: UIWindow?) {
         window = win
@@ -59,7 +59,7 @@ class AppWindow: CD_AppDelegate {
 }
 ```
 ```
-class AppConfig: CD_AppDelegate {
+class AppConfig: AppProtocol {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         return true
     }
@@ -69,7 +69,7 @@ class AppConfig: CD_AppDelegate {
 }
 ```
 ```
-class AppPay: CD_AppDelegate {
+class AppPay: AppProtocol {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         return true
     }
@@ -78,8 +78,6 @@ class AppPay: CD_AppDelegate {
     }
 }
 ```
-
-- [参考](https://juejin.im/post/5bd0259d5188251a29719086#comment)
 
 ## Author
 
